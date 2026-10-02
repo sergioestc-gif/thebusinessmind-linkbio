@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>TikTok Auth Callback</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { font-family: -apple-system, 'Inter', sans-serif; max-width: 600px; margin: 60px auto; padding: 0 20px; background: #0a0a14; color: #f5f0e6; line-height: 1.6; text-align: center; }
+  .code-box { background: #14141f; border: 1px solid #26263a; border-radius: 10px; padding: 20px; margin-top: 24px; word-break: break-all; font-family: monospace; font-size: 14px; color: #f0c040; }
+  button { margin-top: 16px; background: #f0c040; color: #0a0a14; border: none; padding: 10px 18px; border-radius: 8px; font-weight: 700; cursor: pointer; }
+</style>
+</head>
+<body>
+  <h1>Autorización recibida</h1>
+  <p>Copiá el código de abajo y pegalo donde se te indique para completar la conexión.</p>
+  <div class="code-box" id="code">Leyendo parámetros...</div>
+  <button onclick="copyCode()">Copiar código</button>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    const error = params.get('error');
+    const box = document.getElementById('code');
+    if (code) {
+      box.textContent = code;
+    } else if (error) {
+      box.textContent = 'Error: ' + error + ' — ' + (params.get('error_description') || '');
+    } else {
+      box.textContent = 'No se recibió ningún código en la URL.';
+    }
+    function copyCode() {
+      navigator.clipboard.writeText(box.textContent);
+    }
+  </script>
+</body>
+</html>
