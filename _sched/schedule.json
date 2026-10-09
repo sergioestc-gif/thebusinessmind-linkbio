@@ -178,5 +178,15 @@
   "day": 16,
   "time": "19:00",
   "order": 7
+ },
+ "bm8": {
+  "brand": "bm",
+  "file": "businessmind_videos/reel_sinek_construye_relaciones_de_verdad.mp4",
+  "name": "reel_sinek_construye_relaciones_de_verdad",
+  "title": "Simon Sinek: Construye Relaciones de Verdad #shorts",
+  "desc": "Si te importa una relación, constrúyela de verdad. 🤝\nSimon Sinek cuenta que su agente hipotecario lo llamó para felicitarlo por su casa y, en la misma llamada, le pidió que lo recomendara. Ahí entendió que para él solo era un número en una hoja de cálculo.\nSu conclusión es simple: si de verdad quieres construir relaciones, entonces construye relaciones.\n\nSíguenos para más mentalidad de negocios todos los días 🔔\n\n#SimonSinek #Liderazgo #Emprendimiento #MentalidadDeNegocios #Ventas #Relaciones #Negocios #Emprendedores #TheBusinessMind #ServicioAlCliente",
+  "day": 12,
+  "time": "8:00",
+  "order": 8
  }
 }
